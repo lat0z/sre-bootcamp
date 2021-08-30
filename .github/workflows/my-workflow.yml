@@ -49,8 +49,8 @@ jobs:
         with:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/dummy-workflow:latest 
-          context: ./auth-api/ #/home/runner/work/sre-bootcamp/sre-bootcamp/auth-api/python
-          file: ./auth-api/Dockerfile
+          context: /home/runner/work/sre-bootcamp/sre-bootcamp/auth-api/
+          file: /home/runner/work/sre-bootcamp/sre-bootcamp/auth-api//Dockerfile
       
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
