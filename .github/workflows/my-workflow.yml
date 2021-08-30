@@ -49,4 +49,5 @@ jobs:
         with:
           push: true
           tags: wize-luis-torres:latest 
+          file: auth_api/python/Dockerfile
 
