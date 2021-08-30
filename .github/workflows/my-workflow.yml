@@ -33,10 +33,7 @@ jobs:
   
   docker:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      
+    steps:      
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
@@ -49,5 +46,6 @@ jobs:
         with:
           push: true
           tags: wize-luis-torres:latest 
-          file: auth_api/python/Dockerfile
+          context: ./auth_api/python
+          file: Dockerfile
 
