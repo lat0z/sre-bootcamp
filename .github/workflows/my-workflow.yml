@@ -45,7 +45,7 @@ jobs:
         
       - name: Build and push image 
         id: docker_build
-        run:|
+        run: |
           cd auth_api/python; docker build -t ${{secrets.DOCKERHUB_USERNAME}}/pytest:latest .
       
       - name: Image digest
