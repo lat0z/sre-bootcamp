@@ -2,7 +2,7 @@ name: Docker Action to test api and push docker image to docker hub
 
 on:
   push:
-    branches: [ main ]
+    branches: [ action-test ]
 
 jobs:
   python-test:
@@ -48,8 +48,8 @@ jobs:
         uses: docker/build-push-action@v2 
         with:
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/wize-luis-torres:latest 
-          context: ./auth_api/python/ #/home/runner/work/sre-bootcamp/sre-bootcamp/auth-api/python
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/dummy-workflow:latest 
+          context: ./ #/home/runner/work/sre-bootcamp/sre-bootcamp/auth-api/python
           file: ./Dockerfile
       
       - name: Image digest
