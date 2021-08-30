@@ -1,5 +1,19 @@
 # Wizeline SRE Bootcamp Challenge
 
+## Implementation details 
+
+**Language used to implement the missing endpoints:** python 
+
+**Docker hub link:** https://hub.docker.com/r/latoz/wize-luis-torres
+
+I have added a github action to run the unit tests, also it is building and push the docker image to my docker hub account every time there is a commit to the main branch. 
+I have added in the tests the token provided and the one created by this implementation to confirm both are valid tokens.
+
+**Implementation issues:**
+* I didn't fix the issue with the order of the jwt header elements, using ordered dictionaries is not working.
+* The database connection properties and the key used to encrypt the token are hard coded as part of the implementation, using a .env file didn't work as expected with the tests.
+
+---
 Thank you for registering for the Wizeline Academy SRE Bootcamp, and welcome to the Technical Challenge!
 
 In order to be accepted into the Wizeline Academy SRE Bootcamp, you must successfully complete the Technical Challenge, which consists of two parts. After registering, you have **3 days** to complete both parts, detailed below. 
