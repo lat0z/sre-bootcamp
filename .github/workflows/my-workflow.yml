@@ -48,7 +48,10 @@ jobs:
         uses: docker/build-push-action@v2 
         with:
           push: true
-          tags: wize-luis-torres:latest 
-          context: /home/runner/work/sre-bootcamp/sre-bootcamp/auth-api/python
-          file: Dockerfile
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/wize-luis-torres:latest 
+          context: ./auth_api/python/ #/home/runner/work/sre-bootcamp/sre-bootcamp/auth-api/python
+          file: ./Dockerfile
+      
+      - name: Image digest
+        run: echo ${{ steps.docker_build.outputs.digest }}
 
