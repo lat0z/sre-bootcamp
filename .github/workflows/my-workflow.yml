@@ -49,7 +49,7 @@ jobs:
         with:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/dummy-workflow:latest 
-          context: ./ #/home/runner/work/sre-bootcamp/sre-bootcamp/auth-api/python
+          context: ./auth-api/ #/home/runner/work/sre-bootcamp/sre-bootcamp/auth-api/python
           file: ./Dockerfile
       
       - name: Image digest
