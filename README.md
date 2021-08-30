@@ -6,7 +6,7 @@
 
 **Docker hub link:** https://hub.docker.com/r/latoz/wize-luis-torres
 
-I have added a github action to run the unit tests, also it is building and push the docker image to my docker hub account every time there is a commit to the main branch. 
+I have added a github action to run the unit tests, also it is building and pushing the docker image to my docker hub account every time there is a commit to the main branch, it can be changed in the .github/workflow/my-workflow.yml. 
 I have added in the tests the token provided and the one created by this implementation to confirm both are valid tokens.
 
 **Implementation issues:**
