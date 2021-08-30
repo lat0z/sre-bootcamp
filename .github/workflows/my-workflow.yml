@@ -48,7 +48,7 @@ jobs:
         run: |
           cd auth_api/python; \ 
           docker build -t ${{secrets.DOCKERHUB_USERNAME}}/pytest:latest .;\
-          docker push ${{secrets.DOCKERHUB_USERNAME}}/pytest:latest
+          docker image push ${{secrets.DOCKERHUB_USERNAME}}/pytest:latest
       
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
